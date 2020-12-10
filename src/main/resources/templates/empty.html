@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>REST</title>
+</head>
+<body>
+YOU ARE IN:
+"http://localhost:5444/REST_API/WashingMachines"
+
+
+<div>
+    <table>
+        <thead>
+                <tr>
+                    <th>id</th>
+                    <th>machine_name </th>
+                </tr>
+        </thead>
+
+        <tbody>
+            <tr th:each = "machine : ${machines}">
+                <td th:text = "${machine.id}"></td>
+                <td th:text = "${machine.machine_name}"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<div>
+    Go to
+    <a href="http://localhost:5444/REST_API/WashingMachines/add"> Add Washing Machine page by REST Controller</a>
+</div>
+
+<div>
+    Go to
+    <a href="http://localhost:5444/SimpleController/add"> Add Washing Machine page by Simple Controller</a>
+</div>
+
+
+</body>
+</html>

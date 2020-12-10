@@ -1,0 +1,47 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Добавление</title>
+</head>
+
+
+<body>
+
+<div>
+    Добавить новую стиральную машину
+</div>
+
+<div>
+    <form method="post">
+        <input type="text" name="machine_name" placeholder="Введите марку" />
+        <button type="submit">Добавить стиральную машину в базу!</button>
+    </form>
+</div>
+
+
+<div>
+    You can find a washing machine at
+    <a href="http://localhost:5444/REST_API//WashingMachines/FIND"> Find page </a>
+</div>
+
+
+<div>
+    You can go back to
+    <a href="http://localhost:5444/REST_API/WashingMachines"> MAIN API REST Controller</a>
+</div>
+
+<div>
+    You can go back to
+    <a href="http://localhost:5444/SimpleController"> MAIN API SimpleController</a>
+</div>
+
+
+{{#machines}}
+
+         {{id}}
+         {{machine_name}}
+
+{{/machines}}
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Поиск</title>
+</head>
+
+
+<body>
+
+<div>
+    Найти стиральную машину
+</div>
+
+
+<div>
+    <form method="post" action = "FIND">
+        <input type="text" name="FIND" placeholder="Что искать?" />
+        <button type="submit">Найти в базе!</button>
+    </form>
+</div>
+
+
+<div>
+    You can go back to
+    <a href="http://localhost:5444/REST_API/WashingMachines"> MAIN API REST Controller</a>
+</div>
+
+<div>
+    You can go back to
+    <a href="http://localhost:5444/SimpleController"> MAIN API SimpleController</a>
+</div>
+
+
+{{#machines}}
+    <div>
+         {{id}}
+        <span> {{machine_name}} </span>
+    </div>
+{{/machines}}
+</body>
+
+</html>
